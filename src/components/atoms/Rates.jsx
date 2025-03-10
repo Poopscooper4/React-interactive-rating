@@ -17,8 +17,11 @@ const Rates = ({ setCount, setActive, active }) => {
           <button
             key={event}
             onClick={() => handleButtonClick(event)}
-            style={{ backgroundColor: count === event ? "#7C8798" : "#262E38" }}
-            className={`cursor-pointer  bg-[#262E38] transition-all duration-[0.5s] p-[20px_30px] text-white text-[16px] rounded-[50%] hover:bg-[#FC7614]`}
+            // style={{ backgroundColor: count === event ? "#7C8798" : "#262E38" }}
+            className={`cursor-pointer ${
+              count === event ? "bg-[#7C8798]" : "bg-[#262E38]"
+            }   transition-all duration-[0.5s] p-[20px_30px] text-white text-[16px] rounded-[50%]
+               hover:bg-red-400`}
           >
             {event}
           </button>
